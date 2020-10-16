@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="ui seegment">
+      <div className="ui seegment" style={{ marginBottom: '15px' }}>
         {/* <form className="ui form" onSubmit={(e) => this.onFormSubmit(e)}> */}
         <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="field">
