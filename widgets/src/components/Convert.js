@@ -1,6 +1,3 @@
-// Google Translate API key from author
-// AIzaSyCHUCmR7cT_yDFHC98CZJy2LTms-IwDlM
-
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
@@ -24,7 +21,7 @@ const Convert = ({ language, text}) => {
         params: {
           q: debounceText, 
           target: language.value,
-          key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
+          key: process.env.REACT_APP_GOOGLE_TRANSLATION_KEY
         }
       })
 
