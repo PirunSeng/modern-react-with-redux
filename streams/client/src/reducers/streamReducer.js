@@ -11,7 +11,7 @@ const streamReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_STREAMS:
       // ..._.mapKeys(action.payload), extract object from mapKeys and merged into the same outer obj
-      return { ...state, ..._.mapKeys(action.payload) };
+      return { ...state, ..._.mapKeys(action.payload, "id") };
     case FETCH_STREAM:
       return { ...state, [action.payload.id]: action.payload };
     case CREATE_STREAM:
